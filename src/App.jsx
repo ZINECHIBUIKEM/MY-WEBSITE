@@ -10,7 +10,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Homepage setLightmode={setLightmode} isOpen={isOpen} setIsopen={setIsopen} />} />
+      <Route path="/" element={<Homepage lightmode={lightmode} setLightmode={setLightmode} isOpen={isOpen} setIsopen={setIsopen} />} />
     </Routes>
   )
 }

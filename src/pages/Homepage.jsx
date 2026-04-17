@@ -1,11 +1,20 @@
 import { Header } from "../components/Header"
+import { Footer } from "../components/Footer"
 
-export function Homepage({ setLightmode, setIsopen, isOpen }) {
+export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
   return (
-    <div>
-    <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
-    <Header setIsopen={setIsopen} setLightmode={setLightmode} isOpen={isOpen} />
-    Homepage
-    </div>
+    <>
+      <div className="flex flex-col w-screen items-center">
+        <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
+        <Header setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
+
+        <div className="">
+          Introducing you to Zinexpression Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus eveniet libero, perferendis dignissimos amet praesentium adipisci dolorem omnis enim qui at fugit, iste veritatis repellat ducimus! In voluptas sit odio voluptatem earum debitis possimus! Optio, voluptatum dignissimos minus ratione deleniti eligendi ex fuga suscipit. Dignissimos, veniam? Est expedita quia corrupti tempora libero. Tempora error quod deserunt iure dolores veniam labore eligendi, est at reprehenderit numquam? Adipisci harum ut quibusdam alias nulla, provident maxime doloribus ipsum sed laboriosam, nam voluptatibus iste cupiditate ducimus eum suscipit? Reprehenderit illum beatae eaque eligendi incidunt tempore velit culpa ea excepturi magnam ex sequi maxime necessitatibus rerum, ab temporibus dolorum nihil totam ducimus aspernatur, possimus sunt asperiores? Ullam sunt autem, impedit facere sapiente fuga aspernatur facilis incidunt voluptates quasi? Facilis vel consequatur, id deleniti porro repellat amet rem placeat quo, odio adipisci aspernatur sunt quam. Nesciunt, odio exercitationem quibusdam, culpa vel atque iure officiis vero possimus nostrum consequuntur maiores ipsa unde. Dolorem, animi cumque ad corrupti libero iure consectetur? Soluta distinctio neque atque temporibus quasi dolorum cupiditate veritatis rerum ducimus consequuntur debitis voluptatibus, modi suscipit maiores voluptates possimus perspiciatis non omnis minima odit aspernatur eum aperiam! Unde alias quisquam nesciunt ea. Nobis blanditiis qui minus atque provident! Temporibus cumque non minus. Aut, amet quasi eum nisi tempora praesentium consectetur molestias, reiciendis cumque consequatur incidunt, consequuntur vel qui pariatur iure molestiae veniam ratione! Dignissimos velit similique ab nemo aspernatur et quod beatae quam quos tenetur quo, earum voluptas vero nam ducimus, unde voluptatem culpa voluptate blanditiis omnis eaque ea. Laboriosam aliquid officiis, aliquam hic dolore ducimus, itaque exercitationem sapiente aperiam corporis animi ratione vel dicta quos possimus consectetur soluta, atque voluptatum. Soluta fugit eum possimus qui! Error est minima aliquid earum? Repellendus amet quidem praesentium, recusandae laboriosam, aliquid nemo reprehenderit veritatis laudantium voluptatum quos nihil. Magnam, necessitatibus. Soluta voluptate nostrum amet inventore doloremque cum. Sit nemo adipisci reiciendis animi illum, delectus eaque natus impedit quaerat recusandae. Cupiditate possimus dicta exercitationem deleniti dignissimos, dolorem consequuntur? Incidunt provident qui soluta dolores dolore dolor voluptate, magnam quae quas autem velit eius, quisquam sequi. Molestias blanditiis possimus, nesciunt sed repudiandae odit animi consequuntur doloremque! A, ea? Ad ut soluta expedita quidem dignissimos, nesciunt perspiciatis voluptatum. Debitis error corporis dolore voluptas provident exercitationem quidem eligendi quia est optio cumque, soluta voluptate quis a! Dignissimos corporis ipsam quos pariatur ab. Ullam nemo cupiditate excepturi reprehenderit animi rem temporibus, dolores quod quas alias nobis eius fugiat? Laudantium ut quia voluptate, quasi cum animi ipsum possimus quod fugit, aspernatur labore aut nobis doloremque, ex porro laborum voluptatum modi atque cumque repellat unde. Ex, voluptatibus nemo est quibusdam distinctio optio reprehenderit aperiam eveniet nihil a deleniti facilis deserunt molestiae vero recusandae nam unde placeat? Nesciunt, adipisci odio consequatur neque nam atque reprehenderit necessitatibus tempore voluptatum dolor ipsam deserunt velit et tenetur animi sit iusto quo eligendi consectetur! Animi qui mollitia assumenda maiores repellendus at sint non quam sed optio, in expedita saepe hic magnam accusantium, eius repudiandae. Labore natus earum cupiditate iusto suscipit quaerat nostrum!
+        </div>
+      </div>
+
+      <Footer />
+    </>
+
   )
 }
