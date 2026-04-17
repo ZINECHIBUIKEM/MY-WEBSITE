@@ -1,20 +1,64 @@
+import { useRef, useState, useEffect } from "react"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+import { ScrollToTop } from "../utils/ScrollToTop"
+import topBlack from "../assets/icons/top-black.svg"
+import topWhite from "../assets/icons/top-white.svg"
+import MotionGraphics from "../assets/videos/logo-motion-graphic.mp4"
 
 export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
-  return (
-    <>
-      <div className="flex flex-col w-screen items-center">
-        <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
-        <Header setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
+  const footer = useRef(null);
+  const top = useRef(null);
 
-        <div className="">
-          Introducing you to Zinexpression Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus eveniet libero, perferendis dignissimos amet praesentium adipisci dolorem omnis enim qui at fugit, iste veritatis repellat ducimus! In voluptas sit odio voluptatem earum debitis possimus! Optio, voluptatum dignissimos minus ratione deleniti eligendi ex fuga suscipit. Dignissimos, veniam? Est expedita quia corrupti tempora libero. Tempora error quod deserunt iure dolores veniam labore eligendi, est at reprehenderit numquam? Adipisci harum ut quibusdam alias nulla, provident maxime doloribus ipsum sed laboriosam, nam voluptatibus iste cupiditate ducimus eum suscipit? Reprehenderit illum beatae eaque eligendi incidunt tempore velit culpa ea excepturi magnam ex sequi maxime necessitatibus rerum, ab temporibus dolorum nihil totam ducimus aspernatur, possimus sunt asperiores? Ullam sunt autem, impedit facere sapiente fuga aspernatur facilis incidunt voluptates quasi? Facilis vel consequatur, id deleniti porro repellat amet rem placeat quo, odio adipisci aspernatur sunt quam. Nesciunt, odio exercitationem quibusdam, culpa vel atque iure officiis vero possimus nostrum consequuntur maiores ipsa unde. Dolorem, animi cumque ad corrupti libero iure consectetur? Soluta distinctio neque atque temporibus quasi dolorum cupiditate veritatis rerum ducimus consequuntur debitis voluptatibus, modi suscipit maiores voluptates possimus perspiciatis non omnis minima odit aspernatur eum aperiam! Unde alias quisquam nesciunt ea. Nobis blanditiis qui minus atque provident! Temporibus cumque non minus. Aut, amet quasi eum nisi tempora praesentium consectetur molestias, reiciendis cumque consequatur incidunt, consequuntur vel qui pariatur iure molestiae veniam ratione! Dignissimos velit similique ab nemo aspernatur et quod beatae quam quos tenetur quo, earum voluptas vero nam ducimus, unde voluptatem culpa voluptate blanditiis omnis eaque ea. Laboriosam aliquid officiis, aliquam hic dolore ducimus, itaque exercitationem sapiente aperiam corporis animi ratione vel dicta quos possimus consectetur soluta, atque voluptatum. Soluta fugit eum possimus qui! Error est minima aliquid earum? Repellendus amet quidem praesentium, recusandae laboriosam, aliquid nemo reprehenderit veritatis laudantium voluptatum quos nihil. Magnam, necessitatibus. Soluta voluptate nostrum amet inventore doloremque cum. Sit nemo adipisci reiciendis animi illum, delectus eaque natus impedit quaerat recusandae. Cupiditate possimus dicta exercitationem deleniti dignissimos, dolorem consequuntur? Incidunt provident qui soluta dolores dolore dolor voluptate, magnam quae quas autem velit eius, quisquam sequi. Molestias blanditiis possimus, nesciunt sed repudiandae odit animi consequuntur doloremque! A, ea? Ad ut soluta expedita quidem dignissimos, nesciunt perspiciatis voluptatum. Debitis error corporis dolore voluptas provident exercitationem quidem eligendi quia est optio cumque, soluta voluptate quis a! Dignissimos corporis ipsam quos pariatur ab. Ullam nemo cupiditate excepturi reprehenderit animi rem temporibus, dolores quod quas alias nobis eius fugiat? Laudantium ut quia voluptate, quasi cum animi ipsum possimus quod fugit, aspernatur labore aut nobis doloremque, ex porro laborum voluptatum modi atque cumque repellat unde. Ex, voluptatibus nemo est quibusdam distinctio optio reprehenderit aperiam eveniet nihil a deleniti facilis deserunt molestiae vero recusandae nam unde placeat? Nesciunt, adipisci odio consequatur neque nam atque reprehenderit necessitatibus tempore voluptatum dolor ipsam deserunt velit et tenetur animi sit iusto quo eligendi consectetur! Animi qui mollitia assumenda maiores repellendus at sint non quam sed optio, in expedita saepe hic magnam accusantium, eius repudiandae. Labore natus earum cupiditate iusto suscipit quaerat nostrum!
+  const [ showScrolltotop, setShowscrolltotop ] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowscrolltotop(window.scrollY > 300)
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="pt-45">
+      <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
+
+      <Header setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
+
+      <div className="flex flex-col w-screen px-[2vw] cursor-default min-h-screen lg:px-[5vw]">
+        <div>
+          <div ref={top} className="mb-[5vh] cursor-default">
+            <strong className="text-5xl">
+              Engineering <span className="opacity-40 hover:opacity-100">Beautiful</span> Experiences
+            </strong>
+          </div>
+
+          <div className="w-full h-auto pb-[5vh]">
+            <video src={MotionGraphics} className="object-cover" autoPlay loop muted playsInline />
+          </div>
+
+
+          <div onClick={() => {
+            footer.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            })
+          }}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum consequatur pariatur iste sit iusto necessitatibus aperiam tenetur omnis, excepturi eius ex quaerat tempora? Ut accusantium impedit earum ab, atque, ipsam, deleniti facilis error saepe quidem necessitatibus fugit reprehenderit nulla aliquam? Quidem accusamus esse consectetur assumenda quod perspiciatis in, atque molestiae sit earum quis odio laborum! Voluptas dignissimos ullam quae sunt magnam, reprehenderit minima quia rem quis quisquam amet odio suscipit pariatur vitae, deserunt obcaecati nesciunt omnis id sint corporis, iure magni aut. Tenetur omnis, eius consequatur perspiciatis ullam quas eveniet doloribus officia repudiandae quo? Quaerat inventore voluptate assumenda magni maxime nobis recusandae incidunt! Magni, corrupti unde pariatur, necessitatibus ipsum deleniti molestiae voluptatibus sapiente itaque velit tempora aliquid, corporis quidem iusto expedita distinctio non? Illo officiis corrupti iusto sit fuga sapiente culpa nobis, veritatis optio dolorum, et quisquam blanditiis quam quod architecto est praesentium at id numquam error. Libero officia fuga maxime et alias? Expedita magnam tempora magni delectus tenetur accusantium ea quam minus nulla sapiente fuga beatae similique facere nesciunt, dolores minima eos enim, dolor, suscipit saepe ullam! Culpa sint fuga eveniet dolores labore veritatis alias unde voluptas soluta. Quisquam illum blanditiis et rem ut recusandae, molestias, modi ratione laudantium tempore provident dolorum quasi alias error odio saepe sunt ducimus. Aliquam molestiae recusandae explicabo harum assumenda optio tempore illo! Reprehenderit culpa suscipit beatae voluptate laborum sit nemo, architecto dolores omnis soluta labore nostrum placeat cupiditate. Temporibus minima voluptatibus quibusdam numquam unde, laboriosam rem non ullam et excepturi dolores, ducimus sunt provident, nemo pariatur necessitatibus ipsam officia at molestiae ratione repellendus. Repudiandae, voluptas aliquid neque reprehenderit doloremque eos facere incidunt doloribus ipsa. Sed necessitatibus impedit, vel, officiis odio sint rerum provident ducimus reprehenderit reiciendis est. Voluptate officia porro a ea eius praesentium odit facilis dolorum libero dicta. Dignissimos necessitatibus amet perspiciatis ut atque laudantium perferendis totam facilis ipsa sint sapiente eaque non eligendi, quae qui. Quam accusamus, alias doloremque quidem facilis quia error, illum blanditiis aliquid pariatur voluptates eum dignissimos perspiciatis quis nulla voluptas delectus quibusdam numquam rem sunt ex doloribus, sit iure! Natus sed architecto obcaecati, atque, quos alias totam possimus ut eligendi impedit est? Incidunt veniam consequatur sapiente iure recusandae, fuga mollitia, maiores iusto nihil quaerat eligendi officiis quo dolorem cumque, quasi aperiam animi cum velit voluptates! Atque commodi aliquam maiores omnis minima, praesentium, ab recusandae, nobis exercitationem provident adipisci? Tempora, vitae odio laboriosam libero corporis expedita veniam, fugiat a alias nobis assumenda voluptatibus itaque autem cumque impedit deleniti architecto animi dolor ab repellendus, molestiae iusto cupiditate fuga. Et rerum nam aliquid mollitia, iure obcaecati aliquam suscipit dolorem vitae dignissimos minus saepe? Velit facere blanditiis saepe. Veniam id voluptatum, sequi minus expedita, ipsum eius corporis nostrum quas animi incidunt cupiditate repudiandae possimus voluptate iusto doloremque repellendus dolore accusamus. Accusantium sed similique reprehenderit cupiditate quos nisi voluptate assumenda quo aspernatur dolorem laborum, est culpa ad debitis aliquid, earum sit labore, tempora repellendus sequi odit quaerat nam velit tenetur? Corporis laudantium officiis, reiciendis quae atque minus rerum voluptates possimus optio?
+          </div>
         </div>
       </div>
 
-      <Footer />
-    </>
+      {showScrolltotop && <ScrollToTop isOpen={isOpen} top={top} lightmode={lightmode} topBlack={topBlack} topWhite={topWhite} />}
+      
+      <div ref={footer} >
+        <Footer />
+      </div>
+
+    </div>
 
   )
 }

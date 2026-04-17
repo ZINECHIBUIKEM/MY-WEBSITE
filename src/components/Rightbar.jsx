@@ -10,22 +10,22 @@ export function Rightbar({ isOpen, setIsopen }) {
     setIsopen(false);
   }
   return (
-    <div className="flex transition-all duration-500 ease-in-out h-screen lg:hidden">
-      <div className={`fixed flex flex-col items-start px-[8vw] pt-2 backdrop-blur-lg transition-all ease-in-out duration-300 right-0 top-20 w-[80vw] bg-[#1D1D1F]/90 h-screen z-10 ${isOpen ? "" : "translate-x-205"}`}>
+    <>
+      <div className={`fixed flex flex-col items-start px-[8vw] pt-2 backdrop-blur-lg transition-all ease-in-out duration-500 right-0 top-20 w-[80vw] bg-[#1D1D1F]/90 h-screen z-10 ${isOpen ? "" : "translate-x-310"}`}>
         <span className="text-4xl font-bold">
           ZINE
         </span>
         <ul className="flex flex-col items-start pt-5 pb-20 gap-5">
-          <li className="text-lg hover:cursor-pointer">
+          <li className="opacity-50 hover:opacity-100 hover:cursor-pointer">
             Home
           </li>
-          <li className=" hover:cursor-pointer">
+          <li className="opacity-50 hover:opacity-100 hover:cursor-pointer">
             About
           </li>
-          <li className="hover:cursor-pointer">
+          <li className="opacity-50 hover:opacity-100 hover:cursor-pointer">
             Portfolio
           </li>
-          <li className="hover:cursor-pointer">
+          <li className="opacity-50 hover:opacity-100 hover:cursor-pointer">
             Contact
           </li>
         </ul>
@@ -69,7 +69,7 @@ export function Rightbar({ isOpen, setIsopen }) {
       </div>
 
 
-      <div className={`fixed transition-all ease-in-out duration-300 bg-black/0 opacity-0 top-0 right-0 z-0 w-screen h-screen ${isOpen ? "bg-black/70 opacity-100" : "hidden"}`} onClick={closeRightbar} />
-    </div>
+      <div className={`transition-all ease-in-out duration-300 bg-black/0 opacity-0 top-0 right-0 z-0 w-screen h-screen ${isOpen ? "bg-black/70 opacity-100 fixed" : "hidden"}`} onClick={closeRightbar} />
+    </>
   )
 }

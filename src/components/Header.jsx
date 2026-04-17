@@ -12,15 +12,19 @@ export function Header({ setIsopen, isOpen, lightmode, setLightmode }) {
 
   return (
     <>
-      <div className="fixed flex flex-row px-10 items-center justify-between right-0 top-0 w-screen backdrop-blur-lg z-20 h-20 bg-[#1D1D1F]/90">
+      <div className="fixed flex flex-row px-[10vw] items-center justify-between right-0 top-0 w-screen backdrop-blur-lg z-20 h-20 bg-[#1D1D1F]/90">
         <div>
           <img src={whiteZ} className="w-13" />
-          
         </div>
-        <div className="flex flex-row shrink-0 w-auto gap-10 cursor-pointer">
-          {lightmode ? <img src={moon} className="w-6" onClick={toggleMode} /> : <img src={sun} className="w-6" onClick={toggleMode} />}
-          
-          
+
+        <div className="flex flex-row shrink-0 w-auto gap-[5vw] items-center cursor-pointer lg:gap-[5vw]">
+
+          <button className="hidden text-[#1D1D1F] transition-all ease-in-out duration-100 bg-white rounded-4xl lg:flex">Lets talk</button>
+
+          <div className="flex items-center justify-center w-8 h-8" onClick={toggleMode}>
+            {lightmode ? <img src={moon} className="w-6" /> : <img src={sun} className="w-6" />}
+          </div>
+
 
           <HamburgerMenu setIsopen={setIsopen} isOpen={isOpen} />
         </div>

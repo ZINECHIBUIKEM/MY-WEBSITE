@@ -6,7 +6,7 @@ import github from "../assets/icons/github.svg";
 
 export function Footer() {
   return (
-    <footer className="flex flex-col items-center pt-15 pb-10 bg-[#1D1D1F] w-screen">
+    <footer className="flex flex-col items-center pt-20 pb-10 bg-[#1D1D1F] w-screen">
       <span className="text-white text-4xl font-bold hover:cursor-pointer">Ready to <span className="transition-opacity ease-in-out duration-300 opacity-30 hover:opacity-100">work</span> on the next big solution</span>
 
 
