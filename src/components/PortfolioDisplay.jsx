@@ -27,26 +27,26 @@ export function PortfolioDisplay({ lightmode }) {
   return (
     <div
       ref={ref}
-      className={`flex flex-row items-center justify-center gap-[5vw] h-[70vh] rounded-4xl overflow-hidden ${lightmode ? "bg-black" : "bg-[#1D1D1F]"
+      className={`flex flex-row items-center justify-center gap-[7vw] h-[50vh] md:h-[50vh] md:gap-[1vw] rounded-4xl overflow-hidden ${lightmode ? "bg-black" : "bg-[#1D1D1F]"
         }`}
     >
       {/* COLUMN 1 */}
       <a href="https://weather-app-zinecast.vercel.app/" target="_blank">
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[50vh] w-[30vw] shrink-0">
 
-          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+          <motion.div style={{ y: y1 }} className="transition-all duration-300 min-w-35 max-w-70">
             <img src={Weather1} className="rounded-3xl hover:scale-105" />
           </motion.div>
 
-          <motion.div style={{ y: y1 }} className="transition-all duration-300">
-            <img src={Weather2} className="rounded-3xl hover:scale-105" />
+          <motion.div style={{ y: y1 }} className="transition-all duration-300 min-w-35 max-w-70">
+            <img src={Blue2} className="rounded-3xl hover:scale-105" />
           </motion.div>
 
-          <motion.div style={{ y: y1 }} className="transition-all duration-300">
-            <img src={Weather3} className="rounded-3xl hover:scale-105" />
+          <motion.div style={{ y: y1 }} className="transition-all duration-300 min-w-35 max-w-70">
+            <img src={NW3} className="rounded-3xl hover:scale-105" />
           </motion.div>
 
-          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+          <motion.div style={{ y: y1 }} className="transition-all duration-300 min-w-35 max-w-70">
             <img src={Weather1} className="rounded-3xl hover:scale-105" />
           </motion.div>
         </div>
@@ -54,21 +54,21 @@ export function PortfolioDisplay({ lightmode }) {
 
       {/* COLUMN 2 */}
       <a href="https://zinechibuikem.github.io/BLUE-MAIL-PROJECT/" target="_blank">
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[50vh] w-[30vw] shrink-0">
 
-          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
             <img src={Blue1} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
-            <img src={Blue2} className="rounded-3xl" />
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
+            <img src={Weather2} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
-            <img src={Blue3} className="rounded-3xl" />
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
+            <img src={NW3} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
             <img src={Blue1} className="rounded-3xl" />
           </motion.div>
         </div>
@@ -76,21 +76,21 @@ export function PortfolioDisplay({ lightmode }) {
 
       {/* COLUMN 3 */}
       <a href="https://weather-app-zinecast.vercel.app/" target="_blank">
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[50vh] w-[30vw] shrink-0">
 
-          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
             <img src={NW1} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
-            <img src={NW2} className="rounded-3xl" />
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
+            <img src={Weather2} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
-            <img src={NW3} className="rounded-3xl" />
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
+            <img src={Blue3} className="rounded-3xl" />
           </motion.div>
 
-          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 min-w-35 max-w-70 hover:scale-105">
             <img src={NW1} className="rounded-3xl" />
           </motion.div>
         </div>

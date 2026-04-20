@@ -24,6 +24,14 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
 
   }
 
+  function homeClose() {
+    top.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end"
+    })
+    closeRightbar();
+  }
+
 
   return (
     <div className="z-40">
@@ -32,11 +40,10 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
           ZINE
         </span>
         <ul className="flex flex-col items-start gap-5 pt-5 pb-20">
-          <NavLink to="/">
-            <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={closeRightbar}>
-              Home
-            </li>
-          </NavLink>
+
+          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={homeClose}>
+            Home
+          </li>
 
 
           <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={aboutClose}>

@@ -44,36 +44,39 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
   return (
     <div className={`pt-45 ${lightmode ? "bg-white" : "bg-black"}`}>
-      <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
+      <title>Home | Etukemka Chibuikem - Front-end Web Developer</title>
 
       <Header about={about} top={top} setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
 
       <CursorFollower lightmode={lightmode} />
+
       <div className="flex flex-col w-screen px-[2vw] cursor-default min-h-screen lg:px-[5vw]">
         <div>
-          <div ref={top} className="mb-[5vh] cursor-default">
-            <strong className={`text-5xl ${lightmode ? "text-black" : "text-white"}`}>
-              Engineering <span className="transition-all duration-300 ease-in-out opacity-55 hover:opacity-100">Beautiful</span> Experiences
-            </strong>
-          </div>
+          <div className="flex flex-col items-center justify-between w-full md:flex-row">
+            <div ref={top} className="mb-[5vh] cursor-default">
+              <strong className={`text-5xl md:text-6xl lg:text-7xl ${lightmode ? "text-black" : "text-white"}`}>
+                Engineering <span className="transition-all duration-300 ease-in-out opacity-55 hover:opacity-100">Beautiful</span> Experiences
+              </strong>
+            </div>
 
-          <div className="w-full h-auto lg:w-[30vw] pb-[5vh]">
-            <video src={MotionGraphics} className="object-cover rounded-lg" autoPlay loop muted playsInline />
+            <div className="w-full h-auto px-[5vw] pb-[5vh] md:px-[2vw]">
+              <video src={MotionGraphics} className="object-cover rounded-2xl" autoPlay loop muted playsInline />
+            </div>
           </div>
 
           <InfiniteScroll lightmode={lightmode} />
 
-          <div className="mx-5 my-20 text-black">
+          <div className="mx-[5vw] my-20">
             <PortfolioDisplay lightmode={lightmode} />
           </div>
 
           <Turninglabel lightmode={lightmode} />
 
-          <div className={`font-bold text-4xl px-2 ${lightmode ? "text-black" : "text-white"}`}>
+          <div className={`font-bold text-4xl px-[5vw] ${lightmode ? "text-black" : "text-white"}`}>
             Crafting <span className="opacity-55">Digital</span> Experiences that Move, <span className="opacity-55">Think</span>, and Scale...
           </div>
 
-          <div className="px-5 py-10">
+          <div className="px-[5vw] py-10">
             <article className={`font-light tracking-wide ${lightmode ? "text-black" : "text-white"}`}>
               We believe every great website begins with a clear idea. Before any code is written, the focus is on understanding the purpose—what problem is being solved, who it’s for, and how it should feel to use. This foundation ensures that every project is not just functional, but meaningful.
 
@@ -87,27 +90,31 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
             </article>
           </div>
-          <div className="flex flex-row justify-between px-[5vw] py-10 ">
-            <button onClick={() => {
-              about.current?.scrollIntoView({
-                behavior: "smooth"
-              })
-            }} className={lightmode ? "text-[#ffffff] transition-all ease-in-out duration-100 bg-black text-nowrap rounded-4xl hover:text-black hover:bg-black/0 hover:cursor-pointer" : "text-[#1D1D1F] transition-all ease-in-out duration-100 bg-white rounded-4xl hover:text-white hover:bg-white/0 hover:cursor-pointer text-nowrap"}>
-              About me
-            </button>
 
-            <a href="https://www.behance.net/etukemkchibuik1" target="_blank">
-              <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
-                Discover My Work
+          <div className="flex flex-row items-center justify-center w-full">
+            <div className="flex flex-row justify-between px-[5vw] py-10 gap-[5vw]">
+              <button onClick={() => {
+                about.current?.scrollIntoView({
+                  behavior: "smooth"
+                })
+              }} className={lightmode ? "text-[#ffffff] transition-all ease-in-out duration-100 bg-black text-nowrap rounded-4xl hover:text-black hover:bg-black/0 hover:cursor-pointer" : "text-[#1D1D1F] transition-all ease-in-out duration-100 bg-white rounded-4xl hover:text-white hover:bg-white/0 hover:cursor-pointer text-nowrap"}>
+                About me
               </button>
-            </a>
 
+              <a href="https://www.behance.net/etukemkchibuik1" target="_blank">
+                <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
+                  Discover My Work
+                </button>
+              </a>
+
+            </div>
           </div>
+
 
           <div className={lightmode ? "flex bg-black/10 h-px" : "flex bg-white/10 h-px"} />
 
 
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 my-15">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 my-15">
             <Works lightmode={lightmode} time={"2025 - Present"} role={"Lead Web Developer"} company={"Heartbetween Initiative"} number={"01"} />
 
             <Works lightmode={lightmode} time={"2022 - 2025"} role={"Junior Web Developer"} company={"Bedrock Initiative"} number={"02"} />
@@ -119,7 +126,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
           <div ref={about} className={`text-2xl scroll-mt-24 font-bold ${lightmode ? "text-black" : "text-white"}`}>About me</div>
 
-          <div className={`pt-5 font-light px-5 py-10 tracking-wide ${lightmode ? "text-black" : "text-white"}`}>
+          <div className={`pt-5 font-light px-[5vw] py-10 tracking-wide ${lightmode ? "text-black" : "text-white"}`}>
             My journey into tech began in 2020, starting from a place of creativity. I initially worked as a graphic designer, building visual identities and working on a variety of design projects that helped me understand branding from the ground up. During this phase, I gained hands-on experience with tools like Photoshop and developed a strong eye for detail, composition, and visual storytelling.
 
             As my curiosity grew, I expanded into motion graphics, using After Effects to bring designs to life through animation. This transition deepened my understanding of how visuals can communicate ideas dynamically, not just statically.
@@ -135,54 +142,53 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
             Today, I combine my background in design with my development skills to create digital products that are both functional and visually compelling. I am constantly learning, building, and refining my craft—one project at a time.
           </div>
 
-          <div className="relative flex items-center justify-center px-10 mt-10 mb-10 rounded-lg">
-            <motion.div style={{ y }} className="absolute flex flex-col items-center justify-center -bottom-[15vh] -right-1 bg-black/35 backdrop-blur-sm ring-1 ring-white/5 shadow-xl shadow-black-30 w-[40vw] h-[5vh] rounded-2xl">
-              <span className={`text-xs ${lightmode ? "text-white" : "text-white"}`}>Etukemka Chibuikem</span>
-              <span className={`text-[8px] ${lightmode ? "text-white" : "text-white"}`}>Front-end Developer</span>
-            </motion.div>
-            <img src={ADMIN} className={`rounded-4xl ring-offset-1 w-[70vw]  ${lightmode ? "ring-black/60 ring-1 shadow-[4px_6px_0px_0px_rgba(0,0,0,0.4)]" : "ring-white/10 ring-1 shadow-[4px_6px_0px_0px_rgba(245,245,245,0.2)]"}`} />
+
+          <div className="flex flex-col items-center justify-between w-full my-10 md:flex-row">
+            <div className="flex flex-col items-center justify-between w-full">
+
+              <div className="relative flex items-center justify-center px-[5vw] my-10 rounded-lg max-w-115">
+                <motion.div style={{ y }} className="absolute flex flex-col items-center justify-center -bottom-[15vh] -right-1 bg-black/35 backdrop-blur-[2px] ring-1 ring-white/5 shadow-xl shadow-black-30 w-[40vw] max-w-60 h-[5vh] rounded-2xl">
+                  <span className={`text-xs ${lightmode ? "text-white" : "text-white"}`}>Etukemka Chibuikem</span>
+                  <span className={`text-[8px] ${lightmode ? "text-white" : "text-white"}`}>Front-end Developer</span>
+                </motion.div>
+                <img src={ADMIN} className={`rounded-4xl ring-offset-1 w-[70vw]  ${lightmode ? "ring-black/60 ring-1 shadow-[4px_6px_0px_0px_rgba(0,0,0,0.4)]" : "ring-white/10 ring-1 shadow-[4px_6px_0px_0px_rgba(245,245,245,0.2)]"}`} />
+              </div>
+
+              <div>
+                <a href="https://docs.google.com/document/d/1M6eRDR7dX_-4CSOVeVf74zFjc7JdXX1WVkALhNWPoxA/edit?usp=sharing" target="_blank">
+                  <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
+                    VIEW CERTIFICATES
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div className={lightmode ? "flex bg-black/10 h-px mt-10 md:w-px md:h-90 md-mt-0" : "flex bg-white/10 h-px mt-10 md:w-px md:h-90 md:mt-0"} />
+
+            <div className="flex flex-col w-full">
+              <p className={`text-sm pb-10 pt-10 ${lightmode ? "text-black/80" : "text-white/80"}`}>
+                Trusted by these amazing companies
+              </p>
+              <div className="grid grid-cols-2 gap-[5vw] md:grid-cols-3 md:gap-[3vw] lg:grid-cols-4 px-20 mb-[10vh]">
+                <div className="flex items-center justify-center shrink-0">
+                  <img src={lightmode ? HBBlack : HBWhite} className="w-12 min-w-12" />
+                </div>
+                <div className="flex items-center justify-center shrink-0">
+                  <img src={lightmode ? Chrome3dblack : Chrome3dwhite} className="w-11 min-w-11" />
+                </div>
+                <div className="flex items-center justify-center shrink-0">
+                  <img src={lightmode ? Gkblack : Gkwhite} className="w-12 min-w-12" />
+                </div>
+                <div className="flex items-center justify-center shrink-0">
+                  <img src={lightmode ? Oblitzblack : Oblitzwhite} className="w-12 min-w-12" />
+                </div>
+              </div>
+            </div>
           </div>
 
-
-
-
-          <div>
-            <a href="https://docs.google.com/document/d/1M6eRDR7dX_-4CSOVeVf74zFjc7JdXX1WVkALhNWPoxA/edit?usp=sharing" target="_blank">
-              <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
-                VIEW CERTIFICATES
-              </button>
-            </a>
-          </div>
-
-          <div className={lightmode ? "flex bg-black/10 h-px mt-10" : "flex bg-white/10 h-px mt-10"} />
-
-
-          <p className={`text-sm pb-10 pt-10 ${lightmode ? "text-black/80" : "text-white/80"}`}>
-            Trusted by these amazing companies
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-20 mb-[10vh]">
-            <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? HBBlack : HBWhite} className="w-12 min-w-12" />
-            </div>
-            <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Chrome3dblack : Chrome3dwhite} className="w-11 min-w-11" />
-            </div>
-            <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Gkblack : Gkwhite} className="w-12 min-w-12" />
-            </div>
-            <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Oblitzblack : Oblitzwhite} className="w-12 min-w-12" />
-            </div>
-          </div>
 
           <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
-
-
-
-
-
-
-
         </div>
       </div>
 
