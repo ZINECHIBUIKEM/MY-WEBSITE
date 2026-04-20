@@ -77,7 +77,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
           </div>
 
           <div className="px-[5vw] py-10">
-            <article className={`font-light tracking-wide ${lightmode ? "text-black" : "text-white"}`}>
+            <article className={`font-light text-align tracking-wide ${lightmode ? "text-black" : "text-white"}`}>
               We believe every great website begins with a clear idea. Before any code is written, the focus is on understanding the purpose—what problem is being solved, who it’s for, and how it should feel to use. This foundation ensures that every project is not just functional, but meaningful.
 
               From there, ideas are translated into clean, user-focused designs. Through strong UI/UX principles, layouts are crafted to be clear, balanced, and intentional, with careful attention to typography, spacing, and visual hierarchy. Motion is also considered early, ensuring that interactions feel natural and enhance the overall experience.
@@ -188,7 +188,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
           </div>
 
 
-          <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
+          <div className={lightmode ? "flex bg-black/10 h-px mb-30" : "flex bg-white/10 h-px mb-10"} />
         </div>
       </div>
 

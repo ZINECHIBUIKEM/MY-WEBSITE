@@ -34,30 +34,30 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
 
 
   return (
-    <div className="z-40">
-      <div className={`fixed flex flex-col items-start px-[8vw] pt-[12vh] backdrop-blur-lg transition-all ease-in-out duration-500 right-0 top-0 w-[80vw] h-screen lg:w-[50vw] ${lightmode ? "bg-white/90 text-black" : "bg-[#1D1D1F]/90 text-white"} h-screen z-10 ${isOpen ? "" : "translate-x-310"}`}>
+    <div className="z-90">
+      <div className={`fixed flex flex-col items-start px-[8vw] pt-[12vh] backdrop-blur-lg transition-all z-80 ease-in-out duration-500 right-0 top-0 w-[80vw] h-screen lg:w-[50vw] ${lightmode ? "bg-white/90 text-black" : "bg-[#1D1D1F]/90 text-white"} h-screen z-10 ${isOpen ? "" : "translate-x-310"}`}>
         <span className="text-4xl font-bold">
           ZINE
         </span>
         <ul className="flex flex-col items-start gap-5 pt-5 pb-20">
 
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={homeClose}>
+          <li className="opacity-70 hover:opacity-100 text-[1rem] hover:cursor-pointer" onClick={homeClose}>
             Home
           </li>
 
 
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={aboutClose}>
+          <li className="opacity-70 hover:opacity-100 text-[1rem] hover:cursor-pointer" onClick={aboutClose}>
             About
           </li>
 
           <a href="" target="_blank">
-            <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
+            <li className="opacity-70 hover:opacity-100 text-[1rem] hover:cursor-pointer">
               Portfolio
             </li>
           </a>
 
           <a href="https://wa.me/8101089190?text=Hi%20there,%20I%20want%20to%20talk%20about%20building%20a%20website." target="_blank">
-            <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
+            <li className="opacity-70 hover:opacity-100 text-[1rem] hover:cursor-pointer">
               Contact
             </li>
           </a>
@@ -66,12 +66,12 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
 
         <div className="flex flex-col items-start w-full gap-2 pb-10">
           <span className="text-2xl font-bold">INFORMATION</span>
-          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100">+234 810 108 9190</h3>
-          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100">Etukemkachibuikem@gmail.com</h3>
-          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100">Imo, Nigeria.</h3>
+          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">+234 810 108 9190</h3>
+          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">etukemkachibuikem@gmail.com</h3>
+          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">Imo, Nigeria.</h3>
         </div>
         <div className="flex flex-col items-start w-full my-10">
-          <span className="text-2xl font-bold">FOLLOW ME</span>
+          <span className="text-2xl font-bold text[1rem]">FOLLOW ME</span>
           <div className="flex flex-row w-[80%] justify-between mt-5">
             {/* IMPORT ICONS COMPONENTS FOR SOCIAL MEDIA */}
             <a href="https://github.com/ZINECHIBUIKEM" target="_blank">
@@ -103,7 +103,7 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
       </div>
 
 
-      {lightmode ? <div className={`fixed transition-all ease-in-out duration-300 top-0 right-0 z-0 w-screen h-screen ${isOpen ? "bg-white/80 opacity-100 visible" : "bg-black/0 invisible"}`} onClick={closeRightbar} /> : <div className={`fixed transition-all ease-in-out duration-300 top-0 right-0 z-0 w-screen h-screen ${isOpen ? "bg-black/80 opacity-100 visible" : "bg-black/0 invisible"}`} onClick={closeRightbar} />}
+      {lightmode ? <div className={`fixed transition-all ease-in-out duration-300 top-0 right-0 z-60 w-screen h-screen ${isOpen ? "bg-white/80 opacity-100 visible" : "bg-black/0 invisible"}`} onClick={closeRightbar} /> : <div className={`fixed transition-all ease-in-out duration-300 top-0 right-0 z-60 w-screen h-screen ${isOpen ? "bg-black/80 opacity-100 visible" : "bg-black/0 invisible"}`} onClick={closeRightbar} />}
     </div>
   )
 }

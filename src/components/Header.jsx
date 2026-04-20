@@ -15,7 +15,7 @@ export function Header({ setIsopen, isOpen, lightmode, setLightmode, about, top 
 
   return (
     <>
-      <div className={`fixed flex flex-row px-[10vw] items-center justify-between shadow-lg/3 right-0 top-0 w-screen backdrop-blur-lg z-50 min-h-15 h-[10vh] ${lightmode ? "bg-white/20" : "bg-[#1D1D1F]/90"}`} >
+      <div className={`fixed flex flex-row px-[10vw] items-center justify-between shadow-lg/3 right-0 top-0 w-screen backdrop-blur-lg z-100 min-h-15 h-[10vh] ${lightmode ? "bg-white/20" : "bg-[#1D1D1F]/90"}`} >
         <div>
           <img src={headerLogo} className="w-10" />
         </div>

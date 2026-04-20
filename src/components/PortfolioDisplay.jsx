@@ -27,7 +27,7 @@ export function PortfolioDisplay({ lightmode }) {
   return (
     <div
       ref={ref}
-      className={`flex flex-row items-center justify-center gap-[7vw] h-[50vh] md:h-[50vh] md:gap-[1vw] rounded-4xl overflow-hidden ${lightmode ? "bg-black" : "bg-[#1D1D1F]"
+      className={`flex flex-row items-center justify-center gap-[10vw] h-[50vh] md:h-[50vh] md:gap-[1vw] rounded-4xl overflow-hidden ${lightmode ? "bg-black" : "bg-[#1D1D1F]"
         }`}
     >
       {/* COLUMN 1 */}
