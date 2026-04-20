@@ -16,7 +16,7 @@ export function PortfolioDisplay({ lightmode }) {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end start", "start end"],
+    offset: ["start end", "end start"],
   });
 
   // PARALLAX SPEEDS
