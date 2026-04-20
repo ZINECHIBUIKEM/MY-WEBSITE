@@ -46,7 +46,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
     <div className={`pt-45 ${lightmode ? "bg-white" : "bg-black"}`}>
       <title>Home | Etukemka Chibuikem - Junior Front-end Web Developer</title>
 
-      <Header setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
+      <Header about={about} top={top} setIsopen={setIsopen} setLightmode={setLightmode} lightmode={lightmode} isOpen={isOpen} />
 
       <CursorFollower lightmode={lightmode} />
       <div className="flex flex-col w-screen px-[2vw] cursor-default min-h-screen lg:px-[5vw]">
@@ -87,7 +87,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
             </article>
           </div>
-          <div className="flex flex-row justify-between px-[10vw] py-10 ">
+          <div className="flex flex-row justify-between px-[5vw] py-10 ">
             <button onClick={() => {
               about.current?.scrollIntoView({
                 behavior: "smooth"
@@ -96,10 +96,12 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
               About me
             </button>
 
+            <a href="https://www.behance.net/etukemkchibuik1" target="_blank">
+              <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
+                Discover My Work
+              </button>
+            </a>
 
-            <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
-              Discover My Work
-            </button>
           </div>
 
           <div className={lightmode ? "flex bg-black/10 h-px" : "flex bg-white/10 h-px"} />
@@ -113,7 +115,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
             <Works lightmode={lightmode} time={"2020 - 2022"} role={"Junior Visual Designer"} company={"TeemWoks"} number={"03"} />
           </div>
 
-           <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
+          <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
 
           <div ref={about} className={`text-2xl scroll-mt-24 font-bold ${lightmode ? "text-black" : "text-white"}`}>About me</div>
 
@@ -143,25 +145,39 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
 
 
+
+          <div>
+            <a href="https://docs.google.com/document/d/1M6eRDR7dX_-4CSOVeVf74zFjc7JdXX1WVkALhNWPoxA/edit?usp=sharing" target="_blank">
+              <button className={lightmode ? "text-[#000000] transition-all ease-in-out duration-100 bg-white ring ring-black text-nowrap rounded-4xl hover:text-black hover:cursor-pointer hover:bg-black/0 lg:flex hover:ring-white/0" : "text-[#ffffff] transition-all ease-in-out duration-100 bg-black ring-1 ring-white cursor-pointer text-nowrap rounded-4xl hover:cursor-pointer hover:text-white hover:ring-white/0"}>
+                VIEW CERTIFICATES
+              </button>
+            </a>
+          </div>
+
+          <div className={lightmode ? "flex bg-black/10 h-px mt-10" : "flex bg-white/10 h-px mt-10"} />
+
+
           <p className={`text-sm pb-10 pt-10 ${lightmode ? "text-black/80" : "text-white/80"}`}>
             Trusted by these amazing companies
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-20 mb-[10vh]">
             <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? HBBlack : HBWhite} className="w-15 min-w-15" />
+              <img src={lightmode ? HBBlack : HBWhite} className="w-12 min-w-12" />
             </div>
             <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Chrome3dblack : Chrome3dwhite} className="w-14 min-w-14" />
+              <img src={lightmode ? Chrome3dblack : Chrome3dwhite} className="w-11 min-w-11" />
             </div>
             <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Gkblack : Gkwhite} className="w-15 min-w-15" />
+              <img src={lightmode ? Gkblack : Gkwhite} className="w-12 min-w-12" />
             </div>
             <div className="flex items-center justify-center shrink-0">
-              <img src={lightmode ? Oblitzblack : Oblitzwhite} className="w-15 min-w-15" />
+              <img src={lightmode ? Oblitzblack : Oblitzwhite} className="w-12 min-w-12" />
             </div>
-
-
           </div>
+
+          <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
+
+
 
 
 

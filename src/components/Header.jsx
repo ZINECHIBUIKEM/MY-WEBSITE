@@ -5,7 +5,7 @@ import blackZ from "../assets/icons/black-z.png"
 import sun from "../assets/icons/sun.svg";
 import moon from "../assets/icons/moon.svg";
 
-export function Header({ setIsopen, isOpen, lightmode, setLightmode }) {
+export function Header({ setIsopen, isOpen, lightmode, setLightmode, about, top }) {
 
   function toggleMode() {
     setLightmode(!lightmode);
@@ -37,7 +37,7 @@ export function Header({ setIsopen, isOpen, lightmode, setLightmode }) {
         </div>
       </div>
 
-      <Rightbar isOpen={isOpen} setIsopen={setIsopen} lightmode={lightmode} />
+      <Rightbar about={about} top={top} isOpen={isOpen} setIsopen={setIsopen} lightmode={lightmode} />
     </>
 
 

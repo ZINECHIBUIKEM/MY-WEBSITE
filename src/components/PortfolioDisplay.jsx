@@ -7,54 +7,94 @@ import Blue3 from "../assets/Portfolio/6.png";
 import NW1 from "../assets/Portfolio/7.png";
 import NW2 from "../assets/Portfolio/8.png";
 import NW3 from "../assets/Portfolio/9.png";
-import { motion } from "framer-motion"
 
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function PortfolioDisplay({ lightmode }) {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end start", "start end"],
+  });
+
+  // PARALLAX SPEEDS
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -280]);
+
   return (
-    <div className={`relative flex flex-row items-center justify-center gap-5 h-[80vh] w- rounded-3xl overflow-hidden ${lightmode ? " bg-black" : "bg-[#1D1D1F]"}`}>
+    <div
+      ref={ref}
+      className={`flex flex-row items-center justify-center gap-[5vw] h-[70vh] rounded-4xl overflow-hidden ${lightmode ? "bg-black" : "bg-[#1D1D1F]"
+        }`}
+    >
+      {/* COLUMN 1 */}
       <a href="https://weather-app-zinecast.vercel.app/" target="_blank">
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[90vh] w-[35vw] rounded-2xl shrink-0">
-          <div className="transition-all ease-in-out duration-500 h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Weather1} className="transition-all duration-500 ease-in-out rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Weather2} className="rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Weather3} className="rounded-2xl" />
-          </div>
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+
+          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+            <img src={Weather1} className="rounded-3xl hover:scale-105" />
+          </motion.div>
+
+          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+            <img src={Weather2} className="rounded-3xl hover:scale-105" />
+          </motion.div>
+
+          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+            <img src={Weather3} className="rounded-3xl hover:scale-105" />
+          </motion.div>
+
+          <motion.div style={{ y: y1 }} className="transition-all duration-300">
+            <img src={Weather1} className="rounded-3xl hover:scale-105" />
+          </motion.div>
         </div>
       </a>
 
-      <a href="https://zinechibuikem.github.io/BLUE-MAIL-PROJECT/" target="_blank" >
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[90vh] w-[35vw] rounded-2xl shrink-0">
-          <div className="transition-all ease-in-out duration-500 h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Blue1} className="rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 bg-black h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Blue2} className="rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 bg-black h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={Blue3} className="rounded-2xl" />
-          </div>
+      {/* COLUMN 2 */}
+      <a href="https://zinechibuikem.github.io/BLUE-MAIL-PROJECT/" target="_blank">
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+            <img src={Blue1} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+            <img src={Blue2} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+            <img src={Blue3} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y3 }} className="transition-all duration-300 hover:scale-105">
+            <img src={Blue1} className="rounded-3xl" />
+          </motion.div>
         </div>
       </a>
 
+      {/* COLUMN 3 */}
       <a href="https://weather-app-zinecast.vercel.app/" target="_blank">
-        <div className="flex flex-col gap-[5vh] items-center justify-between h-[90vh] w-[35vw] rounded-2xl shrink-0">
-          <div className="transition-all ease-in-out duration-500 bg-white h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={NW1} className="rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 bg-white h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={NW2} className="rounded-2xl" />
-          </div>
-          <div className="transition-all ease-in-out duration-500 bg-white h-[35vh] w-full rounded-2xl max-w-37.5 hover:scale-110">
-            <img src={NW3} className="rounded-2xl" />
-          </div>
+        <div className="flex flex-col gap-[5vh] items-center justify-between h-[120vh] w-[30vw] shrink-0">
+
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+            <img src={NW1} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+            <img src={NW2} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+            <img src={NW3} className="rounded-3xl" />
+          </motion.div>
+
+          <motion.div style={{ y: y2 }} className="transition-all duration-300 hover:scale-105">
+            <img src={NW1} className="rounded-3xl" />
+          </motion.div>
         </div>
       </a>
-
     </div>
-  )
+  );
 }

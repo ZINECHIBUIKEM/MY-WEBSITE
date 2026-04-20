@@ -15,7 +15,7 @@ export function InfiniteScroll({ lightmode }) {
 
   return (
     <div className={`my-5 overflow-hidden ${lightmode ? "bg-black" : "bg-white/10"} rounded-4xl mx-[5vw] py-2`}>
-      <div className="flex w-max animate-[scroll_20s_linear_infinite] rounded">
+      <div className="flex w-max animate-[scroll_25s_linear_infinite] rounded">
         {[...items, ...items].map((item, index) => (
           <span
             key={index}
@@ -27,4 +27,4 @@ export function InfiniteScroll({ lightmode }) {
       </div>
     </div>
   );
-}
+};

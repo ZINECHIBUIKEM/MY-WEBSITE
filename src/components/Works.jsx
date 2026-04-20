@@ -1,6 +1,6 @@
 export function Works({ lightmode, time, role, company, number }) {
   return (
-      <div className={`flex flex-col px-8 py-10 mx-5 rounded-xl ${lightmode ? "bg-black" : "bg-[#1D1D1F]"}`}>
+      <div className={`trnsition-all ease-in-out duration-300 flex flex-col px-8 py-10 mx-5 rounded-xl hover:scale-105 ${lightmode ? "bg-black" : "bg-[#1D1D1F]"}`}>
         <div className="flex flex-row items-center justify-start mb-3 text-sm font-light">
           {time}
         </div>

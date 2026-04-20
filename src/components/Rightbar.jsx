@@ -6,13 +6,23 @@ import linkedinBlack from "../assets/icons/linkedin-black.svg";
 import behanceBlack from "../assets/icons/behance-black.svg";
 import instagramBlack from "../assets/icons/instagram-black.svg";
 import githubBlack from "../assets/icons/github-black.svg";
+import { NavLink } from "react-router"
 
 
-export function Rightbar({ isOpen, setIsopen, lightmode }) {
+export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
 
   function closeRightbar() {
     setIsopen(false);
   };
+
+  function aboutClose() {
+    about.current?.scrollIntoView({
+      behavior: "smooth"
+    });
+
+    closeRightbar();
+
+  }
 
 
   return (
@@ -22,15 +32,23 @@ export function Rightbar({ isOpen, setIsopen, lightmode }) {
           ZINE
         </span>
         <ul className="flex flex-col items-start gap-5 pt-5 pb-20">
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
-            Home
-          </li>
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
+          <NavLink to="/">
+            <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={closeRightbar}>
+              Home
+            </li>
+          </NavLink>
+
+
+          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer" onClick={aboutClose}>
             About
           </li>
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
-            Portfolio
-          </li>
+
+          <a href="" target="_blank">
+            <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
+              Portfolio
+            </li>
+          </a>
+
           <a href="https://wa.me/8101089190?text=Hi%20there,%20I%20want%20to%20talk%20about%20building%20a%20website." target="_blank">
             <li className="opacity-70 hover:opacity-100 hover:cursor-pointer">
               Contact
