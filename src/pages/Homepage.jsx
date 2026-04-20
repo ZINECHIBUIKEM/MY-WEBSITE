@@ -6,7 +6,7 @@ import { Turninglabel } from "../utils/Turninglabel"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { InfiniteScroll } from "../utils/InfiniteScroll"
 import { CursorFollower } from "../utils/CursorFollower"
-
+import { PortfolioDisplay } from "../components/PortfolioDisplay"
 import { Works } from "../components/Works"
 import topBlack from "../assets/icons/top-black.svg"
 import topWhite from "../assets/icons/top-white.svg"
@@ -63,8 +63,8 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
           <InfiniteScroll lightmode={lightmode} />
 
-          <div className="my-20 text-black">
-            Here is for the portfolio
+          <div className="mx-5 my-20 text-black">
+            <PortfolioDisplay lightmode={lightmode} />
           </div>
 
           <Turninglabel lightmode={lightmode} />

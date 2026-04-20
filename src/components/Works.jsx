@@ -9,7 +9,7 @@ export function Works({ lightmode, time, role, company, number }) {
 
 
         <div className="flex flex-row items-center justify-between pt-5">
-          <div className="px-4 text-sm font-light rounded-2xl ring-1 ring-white/50 py-">{company}</div>
+          <div className="px-2 text-sm font-light rounded-2xl ring-1 ring-white/50 py-">{company}</div>
           <div className="text-sm">{number}</div>
         </div>
 
