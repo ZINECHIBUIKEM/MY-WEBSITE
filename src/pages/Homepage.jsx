@@ -117,9 +117,9 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 my-15">
             <Works lightmode={lightmode} time={"2025 - Present"} role={"Lead Web Developer"} company={"Heartbetween Initiative"} number={"01"} />
 
-            <Works lightmode={lightmode} time={"2022 - 2025"} role={"Junior Web Developer"} company={"Bedrock Initiative"} number={"02"} />
+            <Works lightmode={lightmode} time={"2023 - 2025"} role={"Junior Web Developer"} company={"Bedrock Initiative"} number={"02"} />
 
-            <Works lightmode={lightmode} time={"2020 - 2022"} role={"Junior Visual Designer"} company={"TeemWoks"} number={"03"} />
+            <Works lightmode={lightmode} time={"2020 - 2022"} role={"Senior Visual Designer"} company={"TeemWoks"} number={"03"} />
           </div>
 
           <div className={lightmode ? "flex bg-black/10 h-px mb-10" : "flex bg-white/10 h-px mb-10"} />
@@ -131,7 +131,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
 
             As my curiosity grew, I expanded into motion graphics, using After Effects to bring designs to life through animation. This transition deepened my understanding of how visuals can communicate ideas dynamically, not just statically.
 
-            In 2022, I took a significant step forward by diving into UI/UX design. I formally studied UI/UX through Udemy, where I learned how to design digital experiences that are not only visually appealing but also user-centered and functional. Working on multiple UI/UX projects helped me bridge the gap between design and real-world product thinking.
+            In 2023, I took a significant step forward by diving into UI/UX design. I formally studied UI/UX through Udemy, where I learned how to design digital experiences that are not only visually appealing but also user-centered and functional. Working on multiple UI/UX projects helped me bridge the gap between design and real-world product thinking.
 
             Toward the end of my UI/UX journey, I was introduced to frontend development—and that changed everything.
 
@@ -178,7 +178,7 @@ export function Homepage({ lightmode, setLightmode, setIsopen, isOpen }) {
                   <img src={lightmode ? Chrome3dblack : Chrome3dwhite} className="w-11 min-w-11" />
                 </div>
                 <div className="flex items-center justify-center shrink-0">
-                  <img src={lightmode ? Gkblack : Gkwhite} className="w-12 min-w-12" />
+                  <img src={lightmode ? Gkblack : Gkwhite} className="w-13 min-w-13" />
                 </div>
                 <div className="flex items-center justify-center shrink-0">
                   <img src={lightmode ? Oblitzblack : Oblitzwhite} className="w-12 min-w-12" />
