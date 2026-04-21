@@ -11,6 +11,9 @@ export function InfiniteScroll({ lightmode }) {
     "TAILWIND",
     "EXPRESSJS",
     "POSTGRESQL",
+    "PHOTOSHOP",
+    "ILLUSTRATOR",
+    "AFTER EFFECTS"
   ];
 
   return (
