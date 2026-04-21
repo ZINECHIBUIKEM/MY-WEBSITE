@@ -40,19 +40,19 @@ export function Footer({ lightmode }) {
         <span className="text-3xl font-bold">
           Location
         </span>
-        <span className="opacity-50">
-          Imo, Nigeria.
+        <span className="opacity-50 text-[1rem]">
+          Remote, Nigeria.
         </span>
       </div>
       <div className="flex flex-col px-7 lg:pt-[5vh] w-full items-start gap-2">
         <span className="text-3xl font-bold cursor-default">
           Contact
         </span>
-        <span className="opacity-50">
+        <span className="opacity-50 text-[1rem]">
           +234 810 108 9190
         </span>
-        <span className="opacity-50">
-          Etukemkachibuikem@gmail.com
+        <span className="opacity-50 text-[1rem]">
+          etukemkachibuikem@gmail.com
         </span>
       </div>
 

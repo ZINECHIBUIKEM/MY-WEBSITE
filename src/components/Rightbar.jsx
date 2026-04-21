@@ -67,8 +67,8 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
         <div className="flex flex-col items-start w-full gap-2 pb-10">
           <span className="text-2xl font-bold">INFORMATION</span>
           <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">+234 810 108 9190</h3>
-          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">etukemkachibuikem@gmail.com</h3>
-          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">Imo, Nigeria.</h3>
+          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem">etukemkachibuikem@gmail.com</h3>
+          <h3 className="transition-all duration-300 ease-in-out cursor-pointer opacity-70 hover:opacity-100 text-[1rem]">Remote, Nigeria.</h3>
         </div>
         <div className="flex flex-col items-start w-full my-10">
           <span className="text-2xl font-bold text[1rem]">FOLLOW ME</span>
