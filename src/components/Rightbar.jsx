@@ -50,7 +50,7 @@ export function Rightbar({ isOpen, setIsopen, lightmode, about, top }) {
             About
           </li>
 
-          <a href="" target="_blank">
+          <a href="https://www.behance.net/etukemkchibuik1" target="_blank">
             <li className="opacity-70 hover:opacity-100 text-[1rem] hover:cursor-pointer">
               Portfolio
             </li>
